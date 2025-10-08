@@ -2,8 +2,8 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div className='flex justify-center items-center h-screen'>
-      <button>Click Me</button>
+    <div className='flex min-h-screen home-wrapper'>
+     Home
     </div>
   )
 }
