@@ -7,10 +7,10 @@ const NavItems=()=>{
     const pathname = usePathname();
     const isActive = (path:string)=>{
         if(path === "/") return pathname === "/";
-        return pathname.startsWith(path);
+        return pathname === path || pathname.startsWith(path + "/");
     }
     return(
-        <ul className="flex flex-col sm:flex-row p-2 gap-3 sm: gap-10 font-medium text-lg">
+        <ul className="flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium text-lg">
             {Nav_Items.map(({ href, path })=>(
                 <li key={href} >
                     <Link href={href} className={`hover:text-yellow-500 color-transition ${
